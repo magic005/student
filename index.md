@@ -1,16 +1,60 @@
 ---
 layout: base
-title: I'm ans
+title: I'm Ansh
 hide: true
 ---
 
-Hi! My name is ans
+<style>
+    /* Subtle enhancements */
+    .badge-group a img {
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        border-radius: 6px;
+    }
+    .badge-group a img:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
 
-### Development Environment
+    .button-tile {
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-weight: 600;
+        box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.08);
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
 
-> Coding starts with tools, explore these tools and procedures with a click.
+    .button-tile:hover {
+        transform: scale(1.03);
+        cursor: pointer;
+    }
 
-<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+    .section-title {
+        margin-top: 30px;
+        font-size: 1.4em;
+        border-bottom: 2px solid #eee;
+        padding-bottom: 6px;
+        color: #1e88e5;
+    }
+
+    .footer-note {
+        text-align: center;
+        font-size: 0.9rem;
+        color: #777;
+        margin-top: 40px;
+    }
+</style>
+
+# Hi, I'm Ansh.
+
+Welcome to my space — where I explore code, build things, and share what I learn.
+
+---
+
+### <span class="section-title">🛠️ Development Environment</span>
+
+> Coding starts with tools. Here are the main ones I use:
+
+<div class="badge-group" style="display: flex; flex-wrap: wrap; gap: 10px;">
     <a href="https://github.com/Open-Coding-Society/student">
         <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
     </a>
@@ -25,30 +69,52 @@ Hi! My name is ans
     </a>
 </div>
 
-<br>
+---
 
-### Class Progress
+### <span class="section-title">📈 Class Progress</span>
 
-> Here is my progress through coding, click to see these online
+> These are some of the projects I've been working on. Check them out!
 
 <div style="display: flex; flex-wrap: wrap; gap: 10px;">
     <a href="{{site.baseurl}}/snake" style="text-decoration: none;">
-        <div style="background-color: #00FF00; color: black; padding: 10px 20px; border-radius: 5px; font-weight: bold;">
-            Snake Game
+        <div class="button-tile" style="background-color: #DFFFD6; color: #034803;">
+            🐍 Snake Game
         </div>
     </a>
     <a href="{{site.baseurl}}/turtle" style="text-decoration: none;">
-        <div style="background-color: #FF0000; color: white; padding: 10px 20px; border-radius: 5px; font-weight: bold;">
-            Turtle
+        <div class="button-tile" style="background-color: #FFE0E0; color: #6F0000;">
+            🐢 Turtle Graphics
         </div>
     </a>
 </div>
 
-<br>
+---
 
-<!-- Contact Section -->
-### Get in Touch
+### <span class="section-title">🌐 Open Coding Society</span>
 
-> Feel free to reach out if you'd like to collaborate or learn more about our work.
+> I'm part of the Open Coding Society — a community for learning and creating.
 
-<p style="color: #2A7DB1;">Open Coding Society: <a href="https://opencodingsociety.com" style="color: #2A7DB1; text-decoration: underline;">Socials</a></p>
+<p style="color: #2A7DB1;">Check out our socials: <a href="https://opencodingsociety.com" style="color: #2A7DB1; text-decoration: underline;">opencodingsociety.com</a></p>
+
+---
+
+### <span class="section-title">🤝 Get in Touch</span>
+
+> Interested in collaborating, learning, or chatting?
+
+- 💬 [Message me on GitHub](https://github.com/Open-Coding-Society/student)  
+- 🧠 Learn with us at [Open Coding Society](https://opencodingsociety.com)  
+- 📧 Reach out via our [contact form](https://opencodingsociety.com/#contact)
+
+---
+
+<p class="footer-note">Built with 💻 and ☕ by Ansh</p>
+
+<div class="mermaid">
+flowchart TD
+  A[Start] --> B{Is it stupid?}
+  B -- Yes --> C[Do it anyway]
+  B -- No  --> D[Also do it anyway]
+  C --> E[Profit]
+  D --> E
+</div>
