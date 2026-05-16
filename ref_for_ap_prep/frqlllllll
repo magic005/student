@@ -1,0 +1,19 @@
+public class SignedText {
+    private String firstName;
+    private String lastName;
+
+    public SignedText(String f, String l) {
+        firstName = f;
+        lastName = l;
+    };
+
+    public String getSignature() {
+        if (firstName.length() == 0) {
+            return lastName;
+        }
+        else {
+            return firstName.charAt(0) + "-" + lastName;
+        };
+    }
+
+    public 

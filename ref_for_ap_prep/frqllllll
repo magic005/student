@@ -1,0 +1,28 @@
+public boolean isWordChain() {
+    int count = 0;
+    for (int i = 1; i <= wordList.size() - 1; i++) {
+        if (wordList.get(i).containts(wordList.get(i-1)) {
+            count++;
+        };
+    };
+
+    return count == (wordList.size() - 1);
+};
+       
+
+public ArrayList<String> createList(String target) {
+    ArrayList<String> list = new ArrayList<>();
+    
+    for (int i = 0; i <= wordList.size() - 1; i++) {
+        if (wordList.get(i).startsWith(target)) {
+            list.add(wordList.get(i).substring(target.length() - 1, wordList.get(i).length() - 1);
+        };
+    };
+};
+    
+
+logic:
+
+if wordList.get(i) has the value of wordList.get(i-1) as a substring within it, return true
+
+wordList.get(i-1).equals(wordList.get(i).substring(n, (n + wordList.get(i-1).length() - 1))

@@ -1,0 +1,138 @@
+1. 
+
+a. 
+
+public int findFreeBlock(int period, int duration) {
+    int length = 0;
+    for (int minute = 0; minute < 60; minute++) {
+        if (isMinuteFree(period, minute)) {
+            length++;
+        }
+        else {
+            length = 0;
+        };
+        if (length == duration) {
+            return minute - duration + 1; 
+    }
+    return -1;
+};
+
+b.
+
+public boolean makeAppointment(int startPeriod, int endPeriod, int duration) {
+    for (int i = startPeriod; i <= endPeriod; i++) {
+        if (findFreeBlock(i, duration) != -1) {
+            reserveBlock(i, findFreeBlock(i, duration), duration);
+            return true;
+        };
+    };
+    return false;
+};
+    
+    
+
+
+
+
+2. 
+
+public class Sign {
+    // fields
+    private String message;
+    private int width;
+
+    // constructor
+    public Sign(String m, int w) {
+        message = m;
+        width = w;
+    };
+
+    // methods
+
+    public int numberOfLines() {
+        int length = message.length();
+        return (int)Math.ceil((double)length / width);
+    };
+
+    public String getLines() {
+        int numLines = numberOfLines();
+        int length = message.length();
+
+        String par = "";
+        
+        for (int i = 0; i <= numLines - 1; i+=width) {
+            par += message.substring(i,width);
+            par += ";";
+        };
+        return par;
+    };
+};
+        
+
+
+
+3. 
+
+
+a. 
+
+public void cleanData(double lower, double upper) {
+    for (int i = temperatures.size() - 1; i >= 0; i--) {
+        if (temperatures.get(i) < lower || temperatures.get(i) > upper) {
+            temperature.remove(i);
+        }
+    }
+};
+
+b.
+
+public int longestHeatWave(double threshold) {
+    int length = 0;
+    int max_length = 0;
+    for (int i = 0; i <= temperatures.size() - 1; i++) {
+        if (temperatures.get(i) > threshold) {
+            length++;
+        }
+        else {
+            length = 0;
+        };
+    };
+    return length;
+};
+
+
+
+4. 
+
+a. 
+public boolean moveCandyToFirstRow(int col) {
+    if (box[0][col] != null) {
+        return true;
+    }
+    else {
+        for (int r = 0; r <= box.length - 1; r++) {
+            if (box[r][col] != null) {
+                box[0][col] = box[r][col];
+                box[r][col] = null;
+                return true;
+            }
+    }
+    return false;
+};
+
+b. 
+
+public Candy removeNextByFlavor(String flavor) {
+    Candy temp = null;
+    for (int r = box.length - 1; r >= 0; r--) {
+        for (int c = 0; c <= box[0].length - 1; c++) {
+            if (box[r][c].equals(flavor)) {
+                temp = box[r][c];
+                box[r][c] = null;
+            };
+        };
+    };
+    return temp;
+};
+
+    

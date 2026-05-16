@@ -1,0 +1,44 @@
+public class Scoreboard {
+    // fields
+
+    private String team1Name;
+    private String team2Name;
+
+    private int team1Score = 0;
+    private int team2Score = 0;
+
+    private String ActiveTeam;
+
+    // constructor
+    public Scoreboard(String one, String two) {
+        team1Name = one;
+        team2Name = two;
+
+        ActiveTeam = team1Name;
+    };
+
+    //methods
+    
+    public void recordPlay(int pts) {
+        if (pts > 0) {
+            if (ActiveTeam == team1Name) {
+                team1Score += pts;
+            }
+            else {
+                team2Score += pts;
+            }
+        }
+        if (pts == 0) {
+            if (ActiveTeam == team1Name) {
+                ActiveTeam = team2Name;
+            };
+            else {
+                ActiveTeam = team1Name;
+            };
+        };
+    };
+
+    public int getScore() {
+        return String team1Score + "-" + team2Score + "-" + ActiveTeam;
+    };
+};

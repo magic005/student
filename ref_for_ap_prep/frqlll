@@ -1,0 +1,70 @@
+3. 
+
+a. 
+
+public double getAverageRating() {
+    int totalRat = 0;
+    for (int i = 0; i <= allReviews.length - 1; i++) {
+        totalRat += allReviews.getRating(i);
+    };
+    return (double)(totalRat)/allReviews.length;
+};
+
+b. 
+
+public ArrayList<String> collectComments() {
+    ArrayList<String> comments = new ArrayList<>();
+
+    for (int i = 0; i <= allReviews.length - 1; i++) {
+        if (allReviews.getComment(i).contains("!")) {
+            if (allReviews.getComment(i).endsWith("!") || allReviews.getComment(i).endsWith(".")) {
+                comments.add(i + "-" + allReviews.getComment(i));
+            }
+            else {
+                comments.add(i + "-" + allReviews.getComment(i) + ".");
+            }
+        }
+    }
+    return comments;
+};
+            
+
+
+
+4. 
+
+a. 
+
+public void repopulate() {
+    for (int r = 0; r <= grid.length - 1; r++) {
+        for (int c = 0; c <= grid[0].length - 1; c++) {
+            boolean valid = false;
+            int check = 0;
+            while (valid == false) {    
+                check = (int)(Math.random() * (MAX)) + 1;
+                if (check % 10 == 0 && check % 100 != 0) {
+                    grid[r][c] = check;
+                    valid = true;
+                }
+            }
+        }
+    }
+}
+
+
+b.
+
+public int countIncreasingCols() {
+    int count = 0;
+
+    for (int r = 1; r <= grid.length - 1; r++) {
+        for (int c = 0; c <= grid[0].length - 1; c++) {
+            boolean increasing = false;
+            if (grid[r][c] >= grid[r-1][c]) {
+               increasing = true;
+            }
+    
+        }
+    }
+    return count;
+}

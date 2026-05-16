@@ -1,0 +1,154 @@
+1. 
+
+a. 
+public int walkDogs(int hour) {
+   int dogs = Math.min(company.numAvailableDogs(hour), maxDogs);
+   company.updateDogs(hour, dogs);
+   return dogs;
+};
+
+b.
+public int dogWalkShift(int startHour, int endHour) {
+    int pay = 0;
+    for (int hr = startHour; hr <= endHour; hr++) {
+        int dogs_for_the_hour = walkDogs(hr)
+        pay += (5 * dogs_for_the_hour);
+        if (dogs_for_the_hour == maxDogs || (hr >= 9 && hr <= 17)) {
+            pay += 3;
+        };
+    };
+    return pay;
+};
+
+
+
+2. 
+
+public class SignedText {
+    // fields
+    private String firstName;
+    private String lastName;
+
+    // constructor
+    public SignedText(String f, String l) {
+        firstName = f;
+        lastName = l;
+    };
+
+    // methods
+    public String getSignature() {
+        if (firstName.length() == 0) {
+            return lastName;
+        }
+        else {
+            return firstName.charAt(0) + "-" + lastName;
+        };
+    };
+
+    public String addSignature(String text) {
+        if (text.indexOf(getSignature()) == -1) {
+            return text + getSignature();
+        };
+        if (text.endsWith(getSignature())) {
+            return text;
+        };
+        if (text.startsWith(getSignature()) {
+            return text.substring(getSignature().length()) + getSignature();
+        };
+    };
+};
+
+
+2. 
+
+
+
+
+3. 
+
+a.
+
+// constructor
+public Round(String[] names) {
+    competitorList = new ArrayList<Competitor>();
+    for (int i = 0; i <= names.length - 1; i++) {
+        competitorList.add(new Competitor(names[i], i+1);
+    };
+};
+
+
+b.
+
+public ArrayList<Match> buildMatches() {
+    if (competitorList.size() % 2 == 0) {
+        for (int i = 0; i < competitorList.size / 2; i++) {
+            new Match(competitorList.get(i), competitorList.get(competitorList.size()- i));
+        }
+    }
+    else {
+        ArrayList<String> list = ArrayList<competitors>;
+        list.remove(0);
+        for (int i = 0; i < list.size / 2; i++) {
+            Match(list.get(i), list.get(list.size()- i));
+        }
+    }
+    return ArrayList<Match>;
+};
+
+
+4. 
+
+a.
+
+public SumorSameGame(int numRows, int numCols) {
+    puzzle = new int[numRows][numCols];
+
+    for (int r = 0; r <= numRows - 1; r++) {
+        for (int c = 0; c <= numCols - 1; c++) {
+            puzzle[r][c] = (int)((Math.random() * 9) + 1);
+        }
+    };
+};
+
+
+b.
+
+public boolean clearPair(int row, int col) {
+    for (int r = 0; r <= puzzle.length - 1; r++) {
+        for (int c = 0; c <= puzzle[0].length - 1; c++) {
+            if (r >= row && ((puzzle[row][col] + puzzle[r][c] == 10) || (puzzle[row][col] == puzzle[r][c])) {
+                puzzle[r][c] = 0;
+                puzzle[row][col] = 0;
+                return true;
+            };
+        };
+    };
+    return false;
+};
+                
+
+public boolean clearPair(int col1, int col2) {
+    for (int r1 = 0; r1 <= puzzle.length - 1; r1++) {
+        for (int r2 = r1 + 1; r2 <= puzzle.length - 1; r2++) {
+            if (puzzle[r1][col1] == puzzle[r2][col2]) {
+                puzzle[r1][col1] = 0;
+                puzzle[r2][col2] = 0;
+            }
+            if (puzzle[r1][col1] + puzzle[r2][col2] == 10) {
+                puzzle[r1][col1] = 0;
+                puzzle[r2][col2] = 0;
+            }
+        }
+    };
+};
+
+
+
+
+
+
+
+
+
+
+    

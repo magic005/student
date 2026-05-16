@@ -1,0 +1,214 @@
+✓
+Write a class called 'Student' with private fields 'name' (String) and 'gpa' (double). Write a constructor and a getter for each.
+public class Student {
+    // fields
+    private String name;
+    private double gpa;
+
+    // constructor
+    public Student(String n, double g) {
+        name = n;
+        gpa = g;
+    };
+
+    // getters
+    public String getName() {
+        return name;
+    };
+    
+    public double getGPA() {
+        return gpa;
+    };
+}
+
+Student test = new Student("Ansh", 4.0);
+System.out.print(test.getGPA());
+▸ Run
+💡 Hint
+👁 Solution
+↺ Reset
+✓ Complete
+Output
+4.0
+✓
+Add a method 'isHonorRoll()' to the Student class that returns true if gpa >= 3.5.
+public class Student {
+    // fields
+    private String name;
+    private double gpa;
+
+    // constructor
+    public Student(String n, double g) {
+        name = n;
+        gpa = g;
+    };
+
+    // getters
+    public String getName() {
+        return name;
+    };
+    
+    public double getGPA() {
+        return gpa;
+    };
+    
+    public boolean isHonorRoll() {
+        return gpa >= 3.5;
+    }
+}
+
+Student test = new Student("Ansh", 4.0);
+System.out.print(test.isHonorRoll());
+▸ Run
+💡 Hint
+👁 Solution
+↺ Reset
+✓ Complete
+Output
+true
+✓
+Write a toString() method for Student that returns "Name (GPA: X.X)" format.
+public class Student {
+    // fields
+    private String name;
+    private double gpa;
+
+    // constructor
+    public Student(String n, double g) {
+        name = n;
+        gpa = g;
+    };
+
+    // getters
+    public String getName() {
+        return name;
+    };
+    
+    public double getGPA() {
+        return gpa;
+    };
+    
+    public boolean isHonorRoll() {
+        return gpa >= 3.5;
+    }
+
+    public String toString() {
+        return name + " (GPA: " + gpa + ")";
+    }
+}
+
+Student test = new Student("Ansh", 4.0);
+System.out.print(test.toString());
+▸ Run
+💡 Hint
+👁 Solution
+↺ Reset
+✓ Complete
+Output
+Ansh (GPA: 4.0)
+
+
+✓
+Create a 2×3 int array and fill every cell with the value 7 using nested loops.
+int[][] arr = new int[2][3];
+
+for (int r = 0; r <= arr.length - 1; r++) {
+    for (int c = 0; c <= arr[0].length - 1; c++) {
+        arr[r][c] = 7;
+    };
+};
+▸ Run
+💡 Hint
+👁 Solution
+↺ Reset
+✓ Complete
+Output
+(no output)
+✓
+Given a 2D array, write nested loops to compute the sum of ALL elements.
+int[][] table = {{1,2,3},{4,5,6},{7,8,9}};
+int sum = 0;
+// Your nested loops here
+
+for (int r = 0; r <= table.length - 1; r++) {
+    for (int c = 0; c <= table[0].length - 1; c++) {
+        sum += table[r][c];
+    };
+};
+
+▸ Run
+💡 Hint
+👁 Solution
+↺ Reset
+✓ Complete
+Output
+45
+✓
+Print only the elements in the SECOND ROW of a 2D array.
+int[][] data = {{1,2},{3,4},{5,6}};
+// Print only second row (index 1)
+
+for (int c = 0; c <= data[0].length - 1; c++) {
+    System.out.println(data[1][c]);
+};
+
+
+▸ Run
+💡 Hint
+Hide Solution
+↺ Reset
+✓ Complete
+Output
+3
+4
+SOLUTION
+int[][] data = {{1,2},{3,4},{5,6}};
+for (int c = 0; c < data[1].length; c++) {
+    System.out.println(data[1][c]);
+}
+// Prints: 3, 4
+
+
+✓
+Create an ArrayList<String> of 3 fruit names. Then print the size and the second element.
+// Create ArrayList, add 3 fruits, print size & 2nd element
+
+ArrayList<String> fruits = new ArrayList<>();
+
+fruits.add("apple");
+fruits.add("kiwi");
+fruits.add("grape");
+
+System.out.println(fruits.size());
+System.out.println(fruits.get(1));
+
+▸ Run
+💡 Hint
+👁 Solution
+↺ Reset
+✓ Complete
+Output
+3
+kiwi
+✓
+Given an ArrayList<Integer> with {10, 20, 30, 20, 40}, remove all elements equal to 20. (Careful with indices!)
+ArrayList<Integer> nums = new ArrayList<>();
+nums.add(10); nums.add(20); nums.add(30);
+nums.add(20); nums.add(40);
+// Remove all 20s
+
+for (int i = nums.size() - 1; i >= 0; i--) {
+    if (nums.get(i) == 20) {
+        nums.remove(i);
+    };
+};
+
+System.out.println(nums);
+
+▸ Run
+💡 Hint
+👁 Solution
+↺ Reset
+✓ Complete
+Output
+[10, 30, 40]
